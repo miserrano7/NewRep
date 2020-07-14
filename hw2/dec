@@ -1,0 +1,23 @@
+#!/bin/bash
+
+file=$1
+fileone=${file}.decr
+cp $file $fileone
+
+./coun $fileone
+
+key=$?
+newKey=$key
+output="out"
+
+while [[ "$newKey" != "0" ]]
+do
+   ./enc $key $fileone $output
+   ./coun $output
+   newKey=$?
+   cmp=$output
+   output=$fileone
+   fileone=$cmp
+done
+
+                           
