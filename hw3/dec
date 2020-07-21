@@ -1,0 +1,21 @@
+#!/bin/bash
+
+file=$1
+newFile=${file}.next
+cp $file $newFile
+line=$(python3 count.py $newFile)
+key=$(echo $line | cut -d" " -f6)
+maxch=$(echo $line | cut -d" " -f3)
+output="outputc2"
+
+while [[ "$maxch" != "e" ]]
+do 
+  python3 enc.py $key $newFile $output
+  line=$(python3 count.py $output)
+  maxch=$(echo $line | cut -d" " -f3)
+  x=$output
+  output=$newFile
+  newFile=$x
+done
+
+
