@@ -1,0 +1,2 @@
+Hello, this is random text in a file to convert to characters
+to hex form.
