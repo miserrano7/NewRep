@@ -1,0 +1,12 @@
+#!bin/bash
+
+mypath="/home/mserrano2"
+
+function push() {
+directoryname=$1
+STACK="/home/mserrano2/$directoryname"
+cd $STACK
+echo "hello"
+}
+
+push

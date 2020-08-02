@@ -1,0 +1,11 @@
+
+ls -l ~ | awk '$1 ~ "^-"' >> FINALinstruction
+  
+-rw-rw-r--. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu 204600 Jun 21 20:32 file.tar.gz
+-rw-rw-r--. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu     57 Jun 14 16:59 hello.c
+-rw-rw-r--. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu     11 Jun 11 18:27 message.a0
+-rwxrwxr-x. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu   1336 Jun 14 17:50 newperverse.py
+-rw-rw-r--. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu    143 Jun 20 17:29 path
+-rwxrw-r--. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu     93 Jun 20 18:30 pusher
+-rw-rw-r--. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu   2515 Jul 29 15:32 README.md
+-rw-rw-r--. 1 mserrano2@gsuad.gsu.edu mserrano2@gsuad.gsu.edu     10 Jul 27 19:08 xx2

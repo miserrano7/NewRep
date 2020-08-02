@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include<sys/stat.h>
+#include <stdlib.h>
+
+int main(int argc, const char *argv[]) {
+    if (mkdir("FINALc",0750) == -1) {
+        
+        mkdir("FINALc/copies", 0750);
+        mkdir("FINALc/encrypted",0750);
+        mkdir("FINALc/decrypted",0750);
+    //    perror(argv[0]);
+  //      exit(EXIT_FAILURE);
+   }   
+    //   path='/home/mserrano2/final/dirC.c'
+     //   path2='/home/mserrano2/final/FINALc/dirC.c'
+        FILE *fin=fopen("dirC.c","rb");
+        FILE *fout=fopen("FINALc/copydirC.c", "wb");
+      
+        char ch;
+        while (!feof(fin)) {
+        fscanf(fin,"%c", &ch);
+        fprintf(fout, "%c", ch);
+      } 
+   
+      char c[600];
+      system("gcc FINALc/copydirC.c -o copydirC.c");
+      sprintf(c, "./copydirC.c >> %s", argv[1]);
+      system(c);
+   return 0;
+}
+
+
